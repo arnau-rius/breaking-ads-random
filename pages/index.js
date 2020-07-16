@@ -57,6 +57,7 @@ export default function Home() {
     TEAM.map((member) => member.value)
   );
   const [fireworksVisible, setFireworksVisible] = useState(false);
+  const [winner, setWinner] = useState("");
   function handleOnChange(checkedValues) {
     setTeamMembersChecked(checkedValues);
   }
@@ -64,7 +65,7 @@ export default function Home() {
     setFireworksVisible(true);
     const candidatesLength = teamMembersChecked.length;
     const winnerIndex = Math.floor(Math.random() * candidatesLength);
-    confirm(teamMembersChecked[winnerIndex]);
+    setWinner(teamMembersChecked[winnerIndex]);
   };
   return (
     <div style={content}>
@@ -101,6 +102,7 @@ export default function Home() {
           </FormItem>
         </Form>
       </div>
+      <div class="winner">{winner}</div>
     </div>
   );
 }
