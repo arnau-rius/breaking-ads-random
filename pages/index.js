@@ -6,6 +6,8 @@ import { SmileFilled } from "@ant-design/icons";
 
 import Link from "next/link";
 
+import { FireWorks } from "../components/Fireworks";
+
 const FormItem = Form.Item;
 
 const content = {
@@ -54,16 +56,19 @@ export default function Home() {
   const [teamMembersChecked, setTeamMembersChecked] = useState(
     TEAM.map((member) => member.value)
   );
+  const [fireworksVisible, setFireworksVisible] = useState(false);
   function handleOnChange(checkedValues) {
     setTeamMembersChecked(checkedValues);
   }
   const handleOnSubmit = () => {
+    setFireworksVisible(true);
     const candidatesLength = teamMembersChecked.length;
     const winnerIndex = Math.floor(Math.random() * candidatesLength);
-    alert(teamMembersChecked[winnerIndex]);
+    confirm(teamMembersChecked[winnerIndex]);
   };
   return (
     <div style={content}>
+      {fireworksVisible && <FireWorks />}
       <div className="text-center mb-5">
         <Link href="#">
           <a className="logo mr-0">
@@ -72,7 +77,7 @@ export default function Home() {
         </Link>
 
         <p className="mb-0 mt-3 text-disabled">
-          Welcome to Breaking Ads world!
+          Welcome to Breaking Ads Random!
         </p>
       </div>
       <div>
@@ -92,9 +97,6 @@ export default function Home() {
           >
             <Button size="large" type="primary" htmlType="submit">
               Get Random
-            </Button>
-            <Button size="large" style={{ marginLeft: 8 }}>
-              Cancel
             </Button>
           </FormItem>
         </Form>

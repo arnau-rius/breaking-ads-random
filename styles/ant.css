@@ -1,0 +1,11 @@
+.ant-checkbox-wrapper {
+  color: var(--primaryColor);
+}
+.ant-checkbox-group {
+  display: flex;
+  justify-content: center;
+}
+.ant-form-item-control-input-content {
+  display: flex;
+  justify-content: center;
+}
