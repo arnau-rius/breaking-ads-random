@@ -191,3 +191,7 @@ body {
 .text-disabled {
   color: var(--textColorSecondary) !important;
 }
+.ant-checkbox-group {
+  display: flex;
+  justify-content: center;
+}

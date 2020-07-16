@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { Form, Checkbox, Button } from "antd";
 
 import { SmileFilled } from "@ant-design/icons";
@@ -10,67 +12,55 @@ const content = {
   marginTop: "100px",
 };
 
-const TEAM = {
-  alejandro: {
-    fullName: "Alex",
-    name: "alejandro",
+const TEAM = [
+  {
+    label: "Alex",
+    value: "alejandro",
     defaultChecked: true,
   },
-  arnau: {
-    fullName: "Arnau",
-    name: "arnau",
+  {
+    label: "Arnau",
+    value: "arnau",
     defaultChecked: true,
   },
-  gaetano: {
-    fullName: "Gaetano",
-    name: "gaetano",
+  {
+    label: "Gaetano",
+    value: "gaetano",
     defaultChecked: true,
   },
-  gianni: {
-    fullName: "Gianni",
-    name: "gianni",
+  {
+    label: "Gianni",
+    value: "gianni",
     defaultChecked: true,
   },
-  marta: {
-    fullName: "Marta",
-    name: "marta",
+  {
+    label: "Marta",
+    value: "marta",
     defaultChecked: true,
   },
-  mohamed: {
-    fullName: "Mohamed",
-    name: "mohamed",
+  {
+    label: "Mohamed",
+    value: "mohamed",
     defaultChecked: true,
   },
-  ignacio: {
-    fullName: "Ignacio",
-    name: "ignacio",
+  {
+    label: "Ignacio",
+    value: "ignacio",
     defaultChecked: true,
   },
-};
-
-const generateCheckbox = (member) => {
-  return (
-    <FormItem
-      key={member.name}
-      label={member.fullName}
-      name={member.name}
-      valuePropName="checked"
-      labelCol={{ span: 8 }}
-      wrapperCol={{ span: 8 }}
-    >
-      <Checkbox checked={member.defaultChecked} />
-    </FormItem>
-  );
-};
+];
 
 export default function Home() {
-  const handleOnSubmit = (teamMembers) => {
-    const candidates = Object.keys(teamMembers).filter((member) =>
-      Boolean(teamMembers[member])
-    );
-    const candidatesLength = candidates.length;
+  const [teamMembersChecked, setTeamMembersChecked] = useState(
+    TEAM.map((member) => member.value)
+  );
+  function handleOnChange(checkedValues) {
+    setTeamMembersChecked(checkedValues);
+  }
+  const handleOnSubmit = () => {
+    const candidatesLength = teamMembersChecked.length;
     const winnerIndex = Math.floor(Math.random() * candidatesLength);
-    alert(candidates[winnerIndex]);
+    alert(teamMembersChecked[winnerIndex]);
   };
   return (
     <div style={content}>
@@ -91,7 +81,11 @@ export default function Home() {
           labelCol={{ span: 8 }}
           onFinish={handleOnSubmit}
         >
-          {Object.values(TEAM).map(generateCheckbox)}
+          <Checkbox.Group
+            options={TEAM}
+            defaultValue={teamMembersChecked}
+            onChange={handleOnChange}
+          ></Checkbox.Group>
           <FormItem
             style={{ marginTop: 48 }}
             wrapperCol={{ span: 8, offset: 8 }}
