@@ -1,20 +1,77 @@
-import { Form, Select, InputNumber, Switch, Slider, Button } from 'antd'
+import { Form, Checkbox, Button } from "antd";
 
-// Custom DatePicker that uses Day.js instead of Moment.js
-import DatePicker from '../components/DatePicker'
+import { SmileFilled } from "@ant-design/icons";
 
-import { SmileFilled } from '@ant-design/icons'
+import Link from "next/link";
 
-import Link from 'next/link'
-
-const FormItem = Form.Item
-const Option = Select.Option
+const FormItem = Form.Item;
 
 const content = {
-  marginTop: '100px',
-}
+  marginTop: "100px",
+};
+
+const TEAM = {
+  alejandro: {
+    fullName: "Alex",
+    name: "alejandro",
+    defaultChecked: true,
+  },
+  arnau: {
+    fullName: "Arnau",
+    name: "arnau",
+    defaultChecked: true,
+  },
+  gaetano: {
+    fullName: "Gaetano",
+    name: "gaetano",
+    defaultChecked: true,
+  },
+  gianni: {
+    fullName: "Gianni",
+    name: "gianni",
+    defaultChecked: true,
+  },
+  marta: {
+    fullName: "Marta",
+    name: "marta",
+    defaultChecked: true,
+  },
+  mohamed: {
+    fullName: "Mohamed",
+    name: "mohamed",
+    defaultChecked: true,
+  },
+  ignacio: {
+    fullName: "Ignacio",
+    name: "ignacio",
+    defaultChecked: true,
+  },
+};
+
+const generateCheckbox = (member) => {
+  return (
+    <FormItem
+      key={member.name}
+      label={member.fullName}
+      name={member.name}
+      valuePropName="checked"
+      labelCol={{ span: 8 }}
+      wrapperCol={{ span: 8 }}
+    >
+      <Checkbox checked={member.defaultChecked} />
+    </FormItem>
+  );
+};
 
 export default function Home() {
+  const handleOnSubmit = (teamMembers) => {
+    const candidates = Object.keys(teamMembers).filter((member) =>
+      Boolean(teamMembers[member])
+    );
+    const candidatesLength = candidates.length;
+    const winnerIndex = Math.floor(Math.random() * candidatesLength);
+    alert(candidates[winnerIndex]);
+  };
   return (
     <div style={content}>
       <div className="text-center mb-5">
@@ -24,74 +81,23 @@ export default function Home() {
           </a>
         </Link>
 
-        <p className="mb-0 mt-3 text-disabled">Welcome to the world !</p>
+        <p className="mb-0 mt-3 text-disabled">
+          Welcome to Breaking Ads world!
+        </p>
       </div>
       <div>
-        <Form layout="horizontal">
-          <FormItem
-            label="Input Number"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 8 }}
-          >
-            <InputNumber
-              size="large"
-              min={1}
-              max={10}
-              style={{ width: 100 }}
-              defaultValue={3}
-              name="inputNumber"
-            />
-          </FormItem>
-
-          <FormItem
-            label="Switch"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 8 }}
-          >
-            <Switch defaultChecked name="switch" />
-          </FormItem>
-
-          <FormItem
-            label="Slider"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 8 }}
-          >
-            <Slider defaultValue={70} />
-          </FormItem>
-
-          <FormItem
-            label="Select"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 8 }}
-          >
-            <Select
-              size="large"
-              defaultValue="lucy"
-              style={{ width: 192 }}
-              name="select"
-            >
-              <Option value="jack">jack</Option>
-              <Option value="lucy">lucy</Option>
-              <Option value="disabled" disabled>
-                disabled
-              </Option>
-              <Option value="yiminghe">yiminghe</Option>
-            </Select>
-          </FormItem>
-
-          <FormItem
-            label="DatePicker"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 8 }}
-          >
-            <DatePicker name="startDate" />
-          </FormItem>
+        <Form
+          layout="horizontal"
+          labelCol={{ span: 8 }}
+          onFinish={handleOnSubmit}
+        >
+          {Object.values(TEAM).map(generateCheckbox)}
           <FormItem
             style={{ marginTop: 48 }}
             wrapperCol={{ span: 8, offset: 8 }}
           >
             <Button size="large" type="primary" htmlType="submit">
-              OK
+              Get Random
             </Button>
             <Button size="large" style={{ marginLeft: 8 }}>
               Cancel
@@ -100,5 +106,5 @@ export default function Home() {
         </Form>
       </div>
     </div>
-  )
+  );
 }
