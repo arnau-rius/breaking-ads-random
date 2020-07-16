@@ -36,6 +36,11 @@ const TEAM = [
     defaultChecked: true,
   },
   {
+    label: "Marc",
+    value: "marc",
+    defaultChecked: true,
+  },
+  {
     label: "Marta",
     value: "marta",
     defaultChecked: true,
