@@ -1,4 +1,4 @@
-# Breaking Ads Random
+# Breaking Ads Random Tool
 
 Install it and run:
 ```bash
