@@ -1,5 +1,5 @@
-# Breaking Ads Random Tool
-https://breakingads.vercel.app/
+# [Breaking Ads Random Tool](https://breakingads.vercel.app/)
+
 
 # JIRA template
 
@@ -10,8 +10,3 @@ https://breakingads.vercel.app/
 ![./public/1.png](./public/1.png)
 - Click the upload icon ![./public/2.png](./public/2.png)
 
-# Install it and run:
-```bash
-npm install
-npm run dev
-```
