@@ -1,4 +1,6 @@
-# [Breaking Ads Random Tool](https://breakingads.vercel.app/)
+# Breaking Ads Random Tool
+
+[Website](https://breakingads.vercel.app/)
 
 
 # JIRA template
