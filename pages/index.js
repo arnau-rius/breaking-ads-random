@@ -50,6 +50,11 @@ const TEAM = [
     value: "yanina",
     defaultChecked: true,
   },
+  {
+    label: "Joan",
+    value: "joan",
+    defaultChecked: true,
+  },
 ];
 
 export default function Home() {
