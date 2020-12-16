@@ -107,7 +107,7 @@ export default function Home() {
           </FormItem>
         </Form>
       </div>
-      <div class="winner">{winner}</div>
+      <div className="winner">{winner}</div>
     </div>
   );
 }
