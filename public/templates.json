@@ -14,6 +14,12 @@
             "text": "{panel:title=USER STORY|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n*Como* ...\n *Quiero* ...\n *Para* ...\n\n *Creemos que* ...\n *Para* ...\n *Conseguiremos* ...\n{panel}\n{panel:title=Background:|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n....\n\n{panel}\n{panel:title=Target KR:|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n....\n\n{panel}\n{panel:title=Acceptance Criteria|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n * ...\n{panel}\n{panel:title=Refinement|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n*Identified dependencies*:\n *Issues to clarify*:\n *Other*:\n{panel}"
         },
         {
+            "issuetype-field": "Discovery",
+            "name": "DISCOVERY TEMPLATE",
+            "projects-field": "MMAA, -, Breaking, Ads",
+            "text": "{panel:title=DESCRIPTION|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n*Creemos que* ...\n *Para* ...\n *Conseguiremos* ...\n{panel}\n{panel:title=Background:|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n....\n\n{panel}\n{panel:title=Target KR:|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n....\n\n{panel}\n{panel:title=Acceptance Criteria|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n * ...\n{panel}"
+        },        
+        {
             "issuetype-field": "Bug",
             "name": "BUG TEMPLATE",
             "projects-field": "",
@@ -23,13 +29,13 @@
             "issuetype-field": "Request",
             "name": "REQUEST TEMPLATE",
             "projects-field": "",
-            "text": "{panel:title=Request Description|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n*...\n{panel}\n{panel:title=Acceptance Criteria|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n * ...\n{panel}\"
+            "text": "{panel:title=Request Description|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n...\n{panel}\n{panel:title=Acceptance Criteria|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n * ...\n{panel}"
         },
         {
             "issuetype-field": "Spike",
             "name": "SPIKE TEMPLATE",
             "projects-field": "",
-            "text": "{panel:title=Spike Description|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n*...\n\n\n*Time Slot:* ...\n{panel}\n{panel:title=Acceptance Criteria|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n * ...\n{panel}\"
+            "text": "{panel:title=Spike Description|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n...\n\n\n*Time Slot:* ...\n{panel}\n{panel:title=Acceptance Criteria|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n * ...\n{panel}"
         },        
         {
             "issuetype-field": "Task",
