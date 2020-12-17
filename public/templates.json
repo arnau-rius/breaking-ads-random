@@ -11,7 +11,7 @@
             "issuetype-field": "Story",
             "name": "DEFAULT TEMPLATE",
             "projects-field": "MMAA, -, Breaking, Ads",
-            "text": "{panel:title=USER STORY|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n*Como* ...\n *Quiero* ...\n *Para* ...\n{panel}\n{panel:title=Background:|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n....\n\n{panel}\n{panel:title=Target KR:|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n....\n\n{panel}\n{panel:title=Acceptance Criteria|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n * ...\n * ...\n * ...{panel}\n{panel:title=Refinement|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n*Identified dependencies*:\n *Issues to clarify*:\n *Other*:\n{panel}"
+            "text": "{panel:title=USER STORY|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n*Como* ...\n *Quiero* ...\n *Para* ...\n\n *Creemos que* ...\n *Para* ...\n *Conseguiremos* ...\n{panel}\n{panel:title=Background:|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n....\n\n{panel}\n{panel:title=Target KR:|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n....\n\n{panel}\n{panel:title=Acceptance Criteria|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n * ...\n * ...\n * ...{panel}\n{panel:title=Refinement|titleBGColor=#a3dbf7|bgColor=#f0f0f0}\n*Identified dependencies*:\n *Issues to clarify*:\n *Other*:\n{panel}"
         },
         {
             "issuetype-field": "Bug",
