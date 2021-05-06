@@ -36,13 +36,13 @@ const TEAM = [
     defaultChecked: true,
   },
   {
-    label: "Marta",
-    value: "marta",
+    label: "Ona",
+    value: "ona",
     defaultChecked: true,
   },
   {
-    label: "Ignacio",
-    value: "ignacio",
+    label: "Anna",
+    value: "anna",
     defaultChecked: true,
   },
   {
